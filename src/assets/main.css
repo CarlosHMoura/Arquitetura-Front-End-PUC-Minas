@@ -1,0 +1,118 @@
+:root {
+  --main-color: rgba(57, 56, 58, 0.842);
+  --white-color: #dfdfdf;
+  --t-1: 'Ubuntu', sans-serif;
+  --t-2: 'Lora', serif;
+  --c-1: #f8f8f8;
+  --c-2: #707070;
+  --c-3: #1792D2;
+  --c-4: #143774;
+  --sides: 2em;
+  /* --layout: 695px; */
+  --layout: 900px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#app {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+h1, h2, h3 
+{
+  /* color: #333; */
+  font-family: var(--t-2);
+  font-weight: 400;
+  line-height: 1.15;
+}
+h1 {
+  color: var(--c-4);
+  font-size: 2rem;
+}
+/* h1 { font-size: 7rem; } */
+/* h2 { font-size: 3rem; } */
+/* h3 { font-size: 2rem; } */
+a { color: var(--c-3); }
+b { font-weight: 700; }
+
+/* header */
+
+.title { margin-bottom: 0.1em; }
+
+.subtitle {
+  color: var(--c-3);
+  font: 700 0.75rem var(--t-1); 
+	text-transform: uppercase;
+}
+
+.article-title { 
+  font-size: 1.5rem; 
+  margin-bottom: 1em;
+  color: var(--c-4);
+}
+.article-read-more,
+.article-info 
+{ font-size: 0.875rem; }
+
+.article-body { font-size: 1.125rem; }
+
+.article-read-more {
+  color: var(--c-3);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 1.25em;
+}
+.article-read-more:hover,
+.article-read-more:focus {
+  color: var(--c-4);
+  text-decoration: underline;
+}
+.article-read-more:active {
+  text-decoration: initial;
+}
+
+.article-info { margin: 2em 0; }
+
+.sides { padding: 0 var(--sides); }
+
+.page-layout {
+  max-width: var(--layout);
+  margin: 0 auto;
+}
+
+.img-full {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 2em;
+}
+
+/* Main */
+
+main .page-layout {
+  --space: 2em;
+  padding: var(--space) 0;
+  display: flex;
+  flex-flow: column; 
+  justify-content: space-between;
+}
+
+@media (min-width: 675px) {
+  main .page-layout { flex-flow: row; }
+  .main-content { width: 70%; }
+  .sidebar { 
+    width: 25%; 
+    min-width: 205px;
+    margin-left: 1em;
+  }
+}
