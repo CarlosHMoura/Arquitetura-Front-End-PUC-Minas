@@ -8,13 +8,11 @@ const {isLoading} = usePageRequests()
 </script>
 
 <template>
-  <Header> 
-    
-  </Header>
+  <Header> </Header>
 
   <RouterView />
 
-  <div v-if="isLoading" >Loading...</div>
+  <div v-if="isLoading" >Carregando...</div>
 </template>
 
 <style scoped>
